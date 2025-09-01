@@ -1,12 +1,12 @@
 
-# ⚙️ Spring Cloud Config 서버 동작 흐름
+# Spring Cloud Config 서버 동작 흐름
 
 Spring Cloud Config Server는 마이크로서비스 아키텍처(MSA) 환경에서 각 서비스의 설정을 **Git 저장소에서 중앙 집중식으로 관리**할 수 있도록 도와주는 핵심 구성 요소입니다.  
 다음 흐름은 Config 서버가 시작되고 클라이언트로부터 설정 요청을 받아 응답하기까지의 전체 과정을 나타냅니다.
 
 ---
 
-## ✅ 주요 역할
+## 주요 역할
 
 | 단계 | 설명 |
 |------|------|
@@ -16,7 +16,7 @@ Spring Cloud Config Server는 마이크로서비스 아키텍처(MSA) 환경에�
 
 ---
 
-## 📄 설정 요청 예시
+## 설정 요청 예시
 
 ```
 
@@ -28,7 +28,7 @@ GET [http://localhost:8888/{application}/{profile}](http://localhost:8888/{appli
 
 ---
 
-## 🔄 작동 흐름도
+## 작동 흐름도
 
 ```mermaid
 flowchart TD
@@ -66,7 +66,7 @@ flowchart TD
 
 ---
 
-## 🛠️ 관련 설정 예시 (`application.yml`)
+## 관련 설정 예시 (`application.yml`)
 
 ```properties
 server.port=8888
@@ -78,7 +78,7 @@ spring.cloud.config.server.git.default-label=main
 
 ---
 
-## ✍️ 개발 포인트
+## 개발 포인트
 
 * `application.yml`에 Git 연동 정보와 서버 포트를 명확히 설정
 * Config 서버는 서비스 디스커버리(Eureka) 또는 Gateway와 통합되어 사용 가능
